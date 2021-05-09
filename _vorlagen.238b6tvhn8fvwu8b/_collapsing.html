@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Ketita Labs company website">
+    <link rel="shortcut icon" type="image/jpg" href="Ketita-logo-black--tiny.jpg"/>
+
+    <title>Ketita Labs</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css">
+
+    <script src="https://use.fontawesome.com/5fb7047e6d.js"></script>
+
+    <style>
+        html {
+          font-family: 'Open Sans', sans-serif;
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background: #fff;
+            margin-left: 0;
+            margin-right: 0;
+            color: #333;
+            font-size: 15px;
+            font-weight:300;
+        }
+
+        p {
+            margin: 5px 0;
+            line-height: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #888;
+        }
+
+        h1 {
+	    font-family: "Crimson Text";
+            font-weight: 400;
+            font-size: 4.0rem;
+        }
+
+        b, strong {font-weight:400;}
+
+
+
+        /* ========================================== */
+        /* HEADER UND NAVIGATION */
+
+        header {
+            position: relative;
+            margin: 20px auto 30px;
+            width: auto;
+            max-width: 800px;
+            height: auto;
+            text-align: center;
+        }
+
+        nav {
+            z-index: 9999;
+            background-color: #fff;
+            margin-top: 45px;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 3px 20px;
+            color: #888;
+        }
+
+        nav ul li a {
+            transition: color .5s ease;
+            font-weight: 400;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:active {
+            color: #333;
+        }
+
+
+        /* ========================================== */
+        /* BLOECKE / BEREICHE DER SEITE */
+
+        section {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section:nth-child(even) {
+            background-color: #eef2f5;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figure img {
+            max-width: 100%;
+        }
+
+        .multicolumn {
+            -webkit-perspective:1;
+
+            /* Anzahl Spalten */
+            -webkit-column-count: 2; /* Ch, Saf, And, BB  */
+            -moz-column-count: 2; /* Fx */
+            column-count: 2; /* IE 10, Op 11.1+ */
+
+            /* Abstand Spalten */
+            -webkit-column-gap: 4em;
+            -moz-column-gap: 4em;
+            column-gap: 4em;
+        }
+
+        .one-column {
+            margin-bottom: 1.5ex; /* was: 60px; */
+        }
+
+        .one-column p {
+            margin-bottom: 1.5ex;  /* was: 1.5rem */
+        }
+
+
+        article {
+            overflow: hidden;
+            width: 33%;
+            display: table-cell;
+            padding-right: 50px;
+        }
+
+        article h3  {
+            margin: 10px 0;
+        }
+
+
+        figcaption {
+            display: inline-block;
+            line-height: 25px;
+            margin-top: 20px;
+            max-width: 75%;
+        }
+
+        figcaption span {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 400;
+       }
+
+        .callout {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 0 10px 30px;
+            width: auto;
+            max-width: 800px;
+        }
+
+        .callout a {
+            text-decoration: underline;
+        }
+
+        .callout a:hover {
+            color: #333;
+        }
+
+        .callout > h2 {
+            font-weight: 300;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .callout > ul {
+            padding-left: 1rem;
+        }
+        .callout > ul li {
+            margin: 5px 0;
+        }
+
+
+        .definition-list dt {
+            margin-bottom: 0.21rem;
+            font-weight:400;
+        }
+
+        .definition-list dd {
+            margin: 0 0 1.5rem 0;
+        }
+
+        .secondary-heading {
+            font-weight: normal;
+            font-size: 15px;
+            color: #12a8b5;
+        }
+
+        .competency-heading {
+            margin-top: 60px;
+            font-weight: 400;
+        }
+
+        /* Lebenslaufbild oben */
+        .cliped-image {
+            border-radius: 100%;
+            /* ff */
+
+            /* Clip-Path als Alternative
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            */
+        }
+
+        .zitat-image {
+            display: inline-block;
+            padding-right: 2px;
+            width: 45px;
+            height: 45px;
+            vertical-align: top;
+            line-height: 50px;
+            text-align: center;
+            background: #12a8b5;
+        }
+
+        .zitat-image + p {
+            display: inline-block;
+            margin: -5px 0 0 20px;
+            width: 90%;
+        }
+
+        .section-arrow {
+            position: relative;
+            top: -20px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #a0adb7;
+            border-radius: 50%;
+            line-height: 40px !important;
+            text-align: center;
+            color: #fff;
+        }
+
+        .back-to-top-button {
+            position: relative;
+            top: -40px;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            background: #12a8b5;
+            border-radius: 50%;
+            line-height: 70px !important;
+            text-align: center;
+            color: #fff;
+        }
+
+
+        /* ========================================== */
+        /* FOOTER */
+        footer {
+            clear: both;
+            position: relative;
+            margin: 60px auto 0;
+            width: auto;
+            height: 100px;
+            text-align: center;
+            background: #333;
+            color: #7d7d7d;
+        }
+
+        footer a:hover {
+            color: initial;
+            text-decoration: underline;
+        }
+
+        footer .footer-copyright {
+            margin: -40px auto 0; /* -40px --> gleicher Wert wie bei .back-to-top-button */
+            max-width: 800px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        footer i.rotate {
+            /* Pfeil nach oben - rotieren */
+            -webkit-transform: rotate(180deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: rotate(180deg); /* IE 9 */
+            transform: rotate(180deg); /* IE 10, Fx 16+, Op 12.1+ */
+        }
+
+
+        /* ========================================== */
+        /* HELFER-KLASSEN */
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .mt30 {
+            margin-top: 35px !important;
+        }
+
+        .motto {
+            margin-bottom: 50px;
+        }
+
+        .hr-small {
+            margin: -10px auto 30px; /* was: -20px auto 30px; */
+            width: 40px;
+            border: solid 1px #12a8b5;
+        }
+
+        .font-licence {
+            margin-top: 10px;
+            font-size: 11px;
+        }
+
+        /* ========================================== */
+        /* ICONS */
+        .icons-social-media {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .icons-social-media > li {
+            display: inline-block;
+            padding: 0 7px 0 7px;
+            color: #888;
+        }
+
+        .icons-social-media > li i {
+            font-size: 20px;
+        }
+
+        .icons-social-media > li i:hover {
+            color: #333;
+            transition: color .5s ease;
+        }
+
+        .icon-location {
+            color: #12a8b5;
+            font-size: 25px !important;
+        }
+
+        .icon-mail {
+            color: #12a8b5;
+            font-size: 20px !important;
+        }
+
+
+        /* ========================================== */
+        /* MEDIA QUERIES FUER RESPONSIVE LAYOUT */
+
+        @media (max-width: 726px) {
+            .motto  {
+                text-align: center;
+            }
+            .motto  p {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 641px) {
+            article {
+                display: block;
+                width: 100%;
+            }
+            figure {
+                margin: 30px auto 0;
+            }
+            figcaption {
+                display: block;
+                width: 55%;
+                margin: 0 auto;
+            }
+
+            .multicolumn {
+                -webkit-column-gap: 2em;
+                -moz-column-gap: 2em;
+                column-gap: 2em;
+            }
+        }
+
+
+        /* ========================================== */
+        /* COLLAPSIBLE TABLE ROWS */
+        table {
+	    width: 750px;
+	    border-collapse: collapse;
+	    margin:50px auto;
+	}
+
+        th {
+	    color: #333;
+	    font-weight: 500;
+	}
+
+        td, th {
+	    padding: 10px;
+	    border: 1px solid #ccc;
+	    text-align: left;
+	    font-size: 15px;
+	}
+
+        .labels tr td {
+	    background-color: #ddd;
+	    font-weight: 550;
+	    color: #333;
+        }
+
+        .label tr td label {
+	    display: block;
+        }
+
+
+        [data-toggle="toggle"] {
+	    display: none;
+        }
+
+
+    </style>
+
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+
+</head>
+
+<body>
+
+<!-- ============================================================================================================================== -->
+<!-- HEADER -->
+<header id="header-start">
+    <img src="./Ketita--logo-black--240x240.jpg" alt="Ketita Labs logo" class="cliped-image">
+    <h1>Ketita Labs</h1>
+
+    <ul class="icons-social-media">
+        <li><a href="https://www.linkedin.com/company/ketita-labs" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/Ketita_Labs" title="Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/Ketita" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+    </ul>
+
+    <nav>
+        <ul>
+            <li><a href="#block-about">ABOUT</a></li>
+            <li><a href="#block-people">TEAM</a></li>
+            <li><a href="#block-intern">INTERNSHIPS</a></li>
+            <li><a href="#block-contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ============================================================================================================================== -->
+<!-- BLOCK 1 -->
+<section id="block-about">
+    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
+    <div class="callout text-left">
+        <h2>About Ketita</h2>
+        <hr class="hr-small"/>
+
+        <div class="one-column">
+            <p>
+              Ketita Labs is a quantum computer software startup, focusing on hybrid quantum-classical algorithms and
+              high-performance quantum-classical computing for computational chemistry.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================================================================================== -->
+<!-- BLOCK 3 -->
+<section id="block-people">
+    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
+    <div class="callout text-center">
+        <h2>Team</h2>
+        <hr class="hr-small"/>
+
+        <article class="img item">
+            <figure>
+                <img src="DOT-300.jpg" alt="Dirk Oliver Theis">
+                <figcaption>
+                    <h3>
+                      Dirk Oliver Theis
+                    </h3>
+                    <a ref="https://www.linkedin.com/in/dirk-oliver-theis-178b8488/">LinkedIn</a>
+                    <br>
+                    PhD in mathematics (Heidelberg)
+                    <br>
+                    Assoc. Prof. at Uni Tartu <a href="https://quantum-computing.ut.ee/?page_id=292">(homepage)</a>
+                    <br>
+                    Juhatus Liige
+                </figcaption>
+            </figure>
+        </article>
+
+        <article class="img item">
+            <figure>
+                <img src="veiko-palge--300.jpg" alt="Veiko Palge">
+                <figcaption>
+                    <h3>
+                      Veiko Palge
+                    </h3>
+                    <a href="https://www.linkedin.com/in/veiko-palge-326380162/">LinkedIn</a>
+                    <br>
+                    PhD in physics (Leeds)
+                    <br>
+                    Researcher in quantum information at Uni Tartu <a href="https://quantum-computing.ut.ee/?page_id=421">(homepage)</a>
+                </figcaption>
+            </figure>
+        </article>
+
+        <article class="img item">
+            <figure>
+                <img src="bahman-300.jpg" alt="Bahman Ghandchi">
+                <figcaption>
+                    <h3>
+                      Bahman Ghandchi
+                    </h3>
+                    <a href="https://www.linkedin.com/in/bahman-ghandchi-91782856/">LinkedIn</a>
+                    <br>
+                    PhD student (Tartu)
+                </figcaption>
+            </figure>
+        </article>
+
+        <br class="clear"/>
+    </div>
+</section>
+
+<!-- ============================================================================================================================== -->
+<!-- BLOCK 2 -->
+<section id="block-intern">
+    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
+    <div class="callout text-left">
+        <h2>Internships &amp; Theses</h2>
+        <hr class="hr-small"/>
+
+        <div class="one-column">
+          <p>
+            Yay, Ketita Labs is <i>finally</i> an official spin-off startup of the University of Tartu.  From June 2020
+            on, we are offering to supervise internships for students who want to learn more about quantum computing in
+            general, quantum-computer chemistry, or hybrid quantum-classical high performance computing.  Supervision
+            agreements and required certificates will be provided.  In these troubled (covid) times, <b>working remotely
+            from your home office is possible</b> for most projects.
+          </p>
+          <p>
+            The table below will be expanded over the coming months.  Click on a title to see the description.
+          </p>
+        </div>
+
+        <table>
+		<tbody class="labels">
+			<tr>
+				<td colspan="4">
+					<label for="QuEST.jl-up">Project: <i>Include new QuEST functionality into QuEST.jl</i></label>
+					<input type="checkbox" name="QuEST.jl-up" id="QuEST.jl-up" data-toggle="toggle">
+				</td>
+			</tr>
+		</tbody>
+		<tbody class="hide" style="display: none;">
+		  <tr>
+		    <th>For Students Of:</th>
+		    <th>Required QC Level:</th>
+		    <th>Programming?</th>
+		    <th>You'll Learn About:</th>
+		  </tr>
+			<tr>
+				<td>CS, physics, math</td>
+				<td>Basics (e.g., <a href="https://quantum-computing.ut.ee/?page_id=1393">this</a>)</td>
+				<td>Yes: <a href="https://www.nature.com/articles/d41586-019-02310-3">Julia</a></td>
+				<td>Quantum operations, tomography, simulation</td>
+			</tr>
+			<tr>
+			  <td colspan="4">
+                            <a href="https://quest.qtechtheory.org/">QuEST</a> is an open-source high-performance quantum circuit simulator.
+                            It features flexible ways to simulate quantum error (dephasing, depolarizing, damping, but also general Kraus
+                            operators) in the computation.  QuEST is written in C, with CUDA GPU acceleration and MPI.
+                            <br>
+                            Ketita is developing an open-source <a href="https://julialang.org/"><i>Julia</i></a> interface for QuEST.
+                            Julia is a powerful
+                            <a href="https://www.sciencedirect.com/journal/advances-in-engineering-software/special-issue/10XCSRHNDRM">high-performance
+                              scientific computing language</a>: think Python meets Matlab with the speed of C.
+                            <br>
+                            In this internship, you'll pick some of new functionality in the QuEST development branch, make it available
+                            in QuEST.jl, and write unit-tests for the new Julia functions.
+                            <br>
+                            Designing the unit tests requires not only mastery of quantum process tomography, but also a thorough
+                            understanding of the new quantum operations that are implemented.  This requires that you are familiar with the
+                            basics of quantum computing at least to the level of knowing what mixed states and density matrices are.  The
+                            rest you'll learn during the project.  Moreover, you'll learn about quantum circuit simulator software and
+                            acquire a thorough understanding of the functionality of QuEST/QuEST.jl.  You will get hands on experience with
+                            integration of C into Julia, and contribute to an open-source quantum computing project (Apache 2.0 license).
+                          </td>
+			</tr>
+		</tbody>
+
+		<tbody class="labels">
+		  <tr>
+		    <td colspan="4">
+		      <label for="QuEST-overrot">Project: <i>Overrotation error in QuEST</i></label>
+		      <input type="checkbox" name="QuEST-overrot" id="QuEST-overrot" data-toggle="toggle">
+		    </td>
+		  </tr>
+		</tbody>
+		<tbody class="hide" style="display: none;">
+		  <tr>
+		    <th>For Students Of:</th>
+		    <th>Required QC Level:</th>
+		    <th>Programming?</th>
+		    <th>You'll Learn About:</th>
+		  </tr>
+			<tr>
+			  <td>Math or physics</td>
+			  <td>Basics (e.g., <a href="https://quantum-computing.ut.ee/?page_id=1393">this</a>)</td>
+			  <td>Yes: C</td>
+			  <td>Coherent quantum error</td>
+			</tr>
+			<tr>
+			  <td colspan="4">
+                            <a href="https://quest.qtechtheory.org/">QuEST</a> is an open-source high-performance
+                            quantum computer simulator. It features flexible ways to simulate quantum error (dephasing,
+                            depolarizing) in the computation.  QuEST is written in C.
+                            <br>
+                            One type of quantum error that is missing from QuEST is coherent overrotation.  This is a
+                            very basic type of error, where a "rotation angle" is off by a small deterministic amount.
+                            In this internship, your task is to implementing "noisy versions" of a subset of QuEST's
+                            gates.  The goal is to be able to emulate the type of overrotation that is present in IBM's
+                            quantum computing devices (<a href="https://www.ibm.com/quantum-computing/learn/what-is-ibm-q/">link</a>).
+                            <br>
+                            In the internship you'll learn-by-doing a lot about coherent quantum errors and IBM's
+                            implementation of quantum gates.  You will work on a fork
+                            from <a href="https://github.com/QuEST-Kit/QuEST">QuEST's GitHub repository</a> (MIT
+                            license), with the goal of merging your changes into the QuEST master branch (if the QuEST
+                            people like it).
+                          </td>
+			</tr>
+		</tbody>
+
+		<tbody class="labels">
+		  <tr>
+		    <td colspan="4">
+		      <label for="OpenFermion-QuEST">Project: <i>Connect OpenFermion & QuEST</i></label>
+		      <input type="checkbox" name="OpenFermion-QuEST" id="OpenFermion-QuEST" data-toggle="toggle">
+		    </td>
+		  </tr>
+		</tbody>
+		<tbody class="hide" style="display: none;">
+		  <tr>
+		    <th>For Students Of:</th>
+		    <th>Required QC Level:</th>
+		    <th>Programming?</th>
+		    <th>You'll Learn About:</th>
+		  </tr>
+		  <tr>
+		    <td>Anything STEM</td>
+		    <td><a href="https://quantum-computing.ut.ee/?page_id=1393">Basics</a></td>
+		    <td>Yes: Python + Julia</td>
+		    <td>Quantum computer chemistry software</td>
+		  </tr>
+		  <tr>
+		    <td colspan="4">
+                      <a href="https://github.com/quantumlib/OpenFermion">OpenFermion</a> is Google's software for the
+                      simulation of chemistry and material science on quantum computers.  It hosts a wealth of tools to
+                      transform, say, data about a molecule into a computations on a quantum device or circuit
+                      simulator.
+                      <br>
+                      It's somewhat a drawback of OpenFermion that it doesn't offer much choice of the quantum device or
+                      simulator.  In this project, you will develop an integration of OpenFermion
+                      with <a href="https://quest.qtechtheory.org/">QuEST</a>, an open-source high-performance quantum
+                      circuit simulator.  The goal is not to create something grandiose such as the integration of
+                      OpenFermion with Google's own Cirq
+                      (<a href="https://github.com/quantumlib/OpenFermion-Cirq/">here</a>), but to create
+                      well-structured and well-documented software that works.  The software will be open source with a
+                      permissive license (e.g., Apache 2.0).
+                      <br>
+                      This project will give you an opportunity to remember your highschool chemistry.  If you know
+                      anything beyond that, that's of course a plus.
+                    </td>
+		  </tr>
+		</tbody>
+
+		<tbody class="labels">
+		  <tr>
+		    <td colspan="4">
+		      <label for="Lin-Depth+Conn">Project: <i>Quantum Simulation of Electronic Structure with Linear
+		      Depth and Connectivity</i></label>
+		      <input type="checkbox" name="Lin-Depth+Conn" id="Lin-Depth+Conn" data-toggle="toggle">
+		    </td>
+		  </tr>
+		</tbody>
+		<tbody class="hide" style="display: none;">
+		  <tr>
+		    <th>For Students Of:</th>
+		    <th>Required QC Level:</th>
+		    <th>Programming?</th>
+		    <th>You'll Learn About:</th>
+		  </tr>
+		  <tr>
+		    <td>Chemistry or physics</td>
+		    <td>Basics (e.g., <a href="https://quantum-computing.ut.ee/?page_id=1393">this</a>)</td>
+		    <td>Yes: Julia</td>
+		    <td>Cutting-edge quantum computer chemistry</td>
+		  </tr>
+		  <tr>
+		    <td colspan="4">
+                      Implement the quantum circuit in this paper: Kivlichan ID, McClean J, Wiebe N, Gidney C,
+                      Aspuru-Guzik A, Chan GK, Babbush R., <i>Quantum simulation of electronic structure with linear
+                      depth and connectivity.</i> Physical review letters. 2018; 120(11):110501.
+                      <br>
+                      The software should work with Ketita's proprietary quantum chemistry simulator software.
+                    </td>
+		  </tr>
+		</tbody>
+
+		<tbody class="labels">
+		  <tr>
+		    <td colspan="4">
+		      <label for="Err-Mitig">Project: <i>Quantum error mitigation</i></label>
+		      <input type="checkbox" name="Err-Mitig" id="Err-Mitig" data-toggle="toggle">
+		    </td>
+		  </tr>
+		</tbody>
+		<tbody class="hide" style="display: none;">
+		  <tr>
+		    <th>For Students Of:</th>
+		    <th>Required QC Level:</th>
+		    <th>Programming?</th>
+		    <th>You'll Learn About:</th>
+		  </tr>
+		  <tr>
+		    <td>Math or physics</td>
+		    <td>Basics (e.g., <a href="https://quantum-computing.ut.ee/?page_id=1393">this</a>)</td>
+		    <td>Yes: Python (Qiskit)</td>
+		    <td>Quantum error mitigation</td>
+		  </tr>
+		  <tr>
+		    <td colspan="4">
+                      Today's quantum computing devices suffer from debilitating quantum noise, which renders the
+                      results of a computation useless if the quantum circuit is to complex.  A number of so-called
+                      mitigation techniques have been developed over the past few years to increase the complexity of
+                      quantum circuits that can be handled.  In this project, you will implement one of them, and study
+                      its effect on quantum circuits.
+                      <br>
+                      There are a bunch of techniques in the literature.  Implementing them will result in open source
+                      software with permissible license (e.g., Apache 2.0).  If your background is strong: Ketita has
+                      some techniques which you could help us to improve.
+                    </td>
+		  </tr>
+		</tbody>
+        </table>
+        <table>
+	  <thead class="labels">
+	    <tr>
+	      <td colspan="4">
+		<label for="research">Research internships</label>
+		<input type="checkbox" name="research" id="research" data-toggle="toggle">
+	      </td>
+	    </tr>
+	  </thead>
+	  <tbody class="hide" style="display: none;">
+	    <tr>
+	      <td colspan="4">
+                For students with a stronger background in quantum computing, quantum physics, computational
+                chemistry, or mathematics, we also have research-oriented internship topics.  We don't advertise
+                Ketita applied research on our web site.  Get in touch!
+                <br>
+                In some research projects, the student creates a proof-of-concept implementation of a ready-on-paper
+                idea made by Ketita.  Based on the level of realism, this may involve coding in Python
+                + <a href="https://qiskit.org/">Qiskit</a>, or
+                in <a href="https://www.nature.com/articles/d41586-019-02310-3">Julia</a>
+                + <a href="https://quest.qtechtheory.org/">QuEST</a>, or in Julia + Ketita's proprietary QC software.
+                In other projects, the student's role is to contribute to on-paper research.  (For mathematicians:
+                Yes, we do proofs!)
+                <br>
+                In all projects, your problem solving skills and creativity are put to good use.  Be ready for a steep
+                learning curve.
+              </td>
+	    </tr>
+	  </tbody>
+        </table>
+
+        <p>Computer Science and Software Engineering students who have taken quantum physics, quantum computing, or
+          solid linear algebra courses should categorize themselves as "math" or "physics", as appropriate.</p>
+
+        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+          $(document).ready(function() {
+	      $('[data-toggle="toggle"]').change(function(){
+	          $(this).parents().next('.hide').toggle();
+	      });
+          });
+        </script>
+
+        <h3 class="secondary-heading">BSc/MSc Theses and ECTS Credits for Internship </h3>
+
+        <p>
+          Most of the projects above can be expanded into a thesis project.  If you are a student of the University of
+          Tartu and interested in a bachelor's or master's thesis, to navigate the bureaucracy, do this:
+          <ul>
+            <li>If you are studying at <i>Füüsika Insituut</i> or <i>Keemia Instituut</i>,
+            contact <a href="https://quantum-computing.ut.ee/?page_id=421">Veiko Palge</a>.</li>
+            <li>If you are studying at <i>Matemaatika ja Statistika Instituut</i> or <i>Arvutiteaduse Instituut</i>,
+            contact <a href="https://quantum-computing.ut.ee/?page_id=292">Dirk Oliver Theis</a>.</li>
+          </ul>
+        </p>
+
+        <p>
+          Regarding internships, students of the University of Tartu can get ECTS credit points for "practical
+          training".  Talk to us first about the topic/project you would like to work on, and contact the responsible
+          instructor in one of the following courses:
+        </p>
+
+        <div class="multicolumn">
+          <ul>
+            <li>Physics Bsc (physics-chemistry-materials)<br>
+              <tt>TFY.00.001</tt> <i>Practical Speciality Training</i><br>
+              (talk to Kalev Tarkpea)<br>
+              <tt>LOKT.00.024</tt> <i>Professional Practice</i><br>
+              (talk to Säde Viirlaid)<br>
+            </li>
+            <li>Physics MSc<br>
+              <tt>LOFY.00.007</tt> <i>Practical Experiences in Physics</i><br>
+              (talk to Laurits Puust)
+            </li>
+          </ul>
+          <ul style="break-before: column;">
+            <li>Math BSc<br>
+              <tt>LTMS.00.011</tt> <i>Practical Training</i><br>
+              (talk to Indrek Zolk)
+            </li>
+            <li>Math MSc<br>
+              <tt>MTMS.01.087</tt> <i>Professional Practice</i><br>
+              (talk to Mare Vähi)
+            </li>
+          </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================================================================================== -->
+<!-- BLOCK 4 -->
+<section id="block-contact">
+    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
+    <div class="callout text-center">
+        <h2>Contact</h2>
+        <hr class="hr-small"/>
+
+        <p>
+            <i class="fa fa-map-marker icon-location" aria-hidden="true"></i><br>
+            <span>Ketita Labs</span> <br>
+            <span>51007 Tartu</span> <br>
+            <span>Estonia</span> <br>
+        </p>
+        <p class="mt30">
+            <i class="fa fa-envelope-o icon-mail" aria-hidden="true"></i><br>
+            <span>ketita [at] ketita [dot] com</span>
+        </p>
+    </div>
+</section>
+
+<!-- ============================================================================================================================== -->
+<!-- FOOTER -->
+<footer>
+    <a href="#header-start" class="back-to-top-button"><i class="fa fa-chevron-down rotate" aria-hidden="true"></i></a>
+    <div class="footer-copyright">
+        Ketita Labs O&Uuml;, Kompanii 8-8, 51007 Tartu, Estonia. Registration code 14429155.
+
+        <div class="font-licence">
+            <a href="https://fortawesome.github.com/Font-Awesome/">FontAwesome</a> icons licensed under <a href="https://scripts.sil.org/OFL_web"> SIL OFL</a>.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
