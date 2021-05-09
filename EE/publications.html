@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Ketita Labs company website">
+    <link rel="shortcut icon" type="image/jpg" href="ketita-logo--black--tiny.jpg"/>
+
+    <title>Ketita Labs</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css">
+
+    <script src="https://use.fontawesome.com/5fb7047e6d.js"></script>
+
+    <style>
+        html {
+          font-family: 'Open Sans', sans-serif;
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background: #fff;
+            margin-left: 0;
+            margin-right: 0;
+            color: #333;
+            font-size: 15px;
+            font-weight:300;
+        }
+
+        p {
+            margin: 5px 0;
+            line-height: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #888;
+        }
+
+        h1 {
+	    font-family: "Crimson Text";
+            font-weight: 400;
+            font-size: 4.0rem;
+        }
+
+        b, strong {font-weight:400;}
+
+
+
+        /* ========================================== */
+        /* HEADER UND NAVIGATION */
+
+        header {
+            position: relative;
+            margin: 20px auto 30px;
+            width: auto;
+            max-width: 800px;
+            height: auto;
+            text-align: center;
+        }
+
+        nav {
+            z-index: 9999;
+            background-color: #fff;
+            margin-top: 45px;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 3px 20px;
+            color: #888;
+        }
+
+        nav ul li a {
+            transition: color .5s ease;
+            font-weight: 400;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:active {
+            color: #333;
+        }
+
+
+        /* ========================================== */
+        /* BLOECKE / BEREICHE DER SEITE */
+
+        section {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section:nth-child(even) {
+            background-color: #eef2f5;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figure img {
+            max-width: 100%;
+        }
+
+        .multicolumn {
+            -webkit-perspective:1;
+
+            /* Anzahl Spalten */
+            -webkit-column-count: 2; /* Ch, Saf, And, BB  */
+            -moz-column-count: 2; /* Fx */
+            column-count: 2; /* IE 10, Op 11.1+ */
+
+            /* Abstand Spalten */
+            -webkit-column-gap: 4em;
+            -moz-column-gap: 4em;
+            column-gap: 4em;
+        }
+
+        .one-column {
+            margin-bottom: 1.5ex; /* was: 60px; */
+        }
+
+        .one-column p {
+            margin-bottom: 1.5ex;  /* was: 1.5rem */
+        }
+
+
+        article {
+            overflow: hidden;
+            width: 33%;
+            display: table-cell;
+            padding-right: 50px;
+        }
+
+        article h3  {
+            margin: 10px 0;
+        }
+
+
+        figcaption {
+            display: inline-block;
+            line-height: 25px;
+            margin-top: 20px;
+            max-width: 75%;
+        }
+
+        figcaption span {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 400;
+       }
+
+        .callout {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 0 10px 30px;
+            width: auto;
+            max-width: 800px;
+        }
+
+        .callout a {
+            text-decoration: underline;
+        }
+
+        .callout a:hover {
+            color: #333;
+        }
+
+        .callout > h2 {
+            font-weight: 300;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .callout > ul {
+            padding-left: 1rem;
+        }
+        .callout > ul li {
+            margin: 5px 0;
+        }
+
+
+        .definition-list dt {
+            margin-bottom: 0.21rem;
+            font-weight:400;
+        }
+
+        .definition-list dd {
+            margin: 0 0 1.5rem 0;
+        }
+
+        .secondary-heading {
+            font-weight: normal;
+            font-size: 15px;
+            color: #12a8b5;
+        }
+
+        .competency-heading {
+            margin-top: 60px;
+            font-weight: 400;
+        }
+
+        /* Lebenslaufbild oben */
+        .cliped-image {
+            border-radius: 100%;
+            /* ff */
+
+            /* Clip-Path als Alternative
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            */
+        }
+
+        .zitat-image {
+            display: inline-block;
+            padding-right: 2px;
+            width: 45px;
+            height: 45px;
+            vertical-align: top;
+            line-height: 50px;
+            text-align: center;
+            background: #12a8b5;
+        }
+
+        .zitat-image + p {
+            display: inline-block;
+            margin: -5px 0 0 20px;
+            width: 90%;
+        }
+
+        .section-arrow {
+            position: relative;
+            top: -20px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #a0adb7;
+            border-radius: 50%;
+            line-height: 40px !important;
+            text-align: center;
+            color: #fff;
+        }
+
+        .back-to-top-button {
+            position: relative;
+            top: -40px;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            background: #12a8b5;
+            border-radius: 50%;
+            line-height: 70px !important;
+            text-align: center;
+            color: #fff;
+        }
+
+
+        /* ========================================== */
+        /* FOOTER */
+        footer {
+            clear: both;
+            position: relative;
+            margin: 60px auto 0;
+            width: auto;
+            height: 100px;
+            text-align: center;
+            background: #333;
+            color: #7d7d7d;
+        }
+
+        footer a:hover {
+            color: initial;
+            text-decoration: underline;
+        }
+
+        footer .footer-copyright {
+            margin: -40px auto 0; /* -40px --> gleicher Wert wie bei .back-to-top-button */
+            max-width: 800px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        footer i.rotate {
+            /* Pfeil nach oben - rotieren */
+            -webkit-transform: rotate(180deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: rotate(180deg); /* IE 9 */
+            transform: rotate(180deg); /* IE 10, Fx 16+, Op 12.1+ */
+        }
+
+
+        /* ========================================== */
+        /* HELFER-KLASSEN */
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .mt30 {
+            margin-top: 35px !important;
+        }
+
+        .motto {
+            margin-bottom: 50px;
+        }
+
+        .hr-small {
+            margin: -10px auto 30px; /* was: -20px auto 30px; */
+            width: 40px;
+            border: solid 1px #12a8b5;
+        }
+
+        .font-licence {
+            margin-top: 10px;
+            font-size: 11px;
+        }
+
+        /* ========================================== */
+        /* ICONS */
+        .icons-social-media {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .icons-social-media > li {
+            display: inline-block;
+            padding: 0 7px 0 7px;
+            color: #888;
+        }
+
+        .icons-social-media > li i {
+            font-size: 20px;
+        }
+
+        .icons-social-media > li i:hover {
+            color: #333;
+            transition: color .5s ease;
+        }
+
+        .icon-location {
+            color: #12a8b5;
+            font-size: 25px !important;
+        }
+
+        .icon-mail {
+            color: #12a8b5;
+            font-size: 20px !important;
+        }
+
+
+        /* ========================================== */
+        /* MEDIA QUERIES FUER RESPONSIVE LAYOUT */
+
+        @media (max-width: 726px) {
+            .motto  {
+                text-align: center;
+            }
+            .motto  p {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 641px) {
+            article {
+                display: block;
+                width: 100%;
+            }
+            figure {
+                margin: 30px auto 0;
+            }
+            figcaption {
+                display: block;
+                width: 55%;
+                margin: 0 auto;
+            }
+
+            .multicolumn {
+                -webkit-column-gap: 2em;
+                -moz-column-gap: 2em;
+                column-gap: 2em;
+            }
+        }
+
+
+        /* ========================================== */
+        /* COLLAPSIBLE TABLE ROWS */
+        table {
+	    width: 750px;
+	    border-collapse: collapse;
+	    margin:50px auto;
+	}
+
+        th {
+	    color: #333;
+	    font-weight: 500;
+	}
+
+        td, th {
+	    padding: 10px;
+	    border: 1px solid #ccc;
+	    text-align: left;
+	    font-size: 15px;
+	}
+
+        .labels tr td {
+	    background-color: #ddd;
+	    font-weight: 550;
+	    color: #333;
+        }
+
+        .label tr td label {
+	    display: block;
+        }
+
+
+        [data-toggle="toggle"] {
+	    display: none;
+        }
+
+
+    </style>
+
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+
+</head>
+
+<body>
+
+<!-- ============================================================================================================================== -->
+<!-- HEADER -->
+<header id="header-start">
+    <img src="./ketita-logo--black--240x240.jpg" alt="Ketita Labs logo" class="cliped-image">
+    <h1>Ketita Labs</h1>
+
+    <!--
+    <ul class="icons-social-media">
+        <li><a href="https://www.linkedin.com/company/ketita-labs" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/Ketita_Labs" title="Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/Ketita" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+    </ul>
+    -->
+
+    <nav>
+        <ul>
+            <li><a href="./index.html#block-about">ABOUT</a></li>
+            <li><a href="./publications.html">VÄLJAANDED</a></li>
+            <li><a href="./index.html#block-software">SOFTWARE</a></li>
+            <li><a href="./consult.html">CONSULTING</a></li>
+            <li><a href="./index.html#block-contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ============================================================================================================================== -->
+<!-- BLOCK PUBLICATIONS -->
+<section id="block-publications">
+    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
+    <div class="callout text-left">
+        <h2>Väljaanded</h2>
+        <hr class="hr-small"/>
+
+        <div class="one-column">
+          <p>
+            See on Ketita Labs'i meeskonna liikmete väljaannete loend.
+          </p>
+        </div>
+
+        <table>
+
+	  <tbody class="labels">
+	    <tr>
+	      <td colspan="4">
+		<label for="query-PQC"><a href="https://arxiv.org/abs/1903.12611">arXiv:1903.12611</a>
+                  <i>Information content of queries in training Parameterized Quantum Circuits</i></label>
+		<input type="checkbox" name="query-PQC" id="query-PQC" data-toggle="toggle">
+	      </td>
+	    </tr>
+	  </tbody>
+	  <tbody class="hide" style="display: none;">
+	    <tr>
+	      <td colspan="4">
+                Bahman Ghandchi &#38 Dirk Oliver Theis (Ketita): To be submitted
+                <br>
+                Parameterized quantum circuits (PQC, aka, variational quantum circuits) are among
+                the proposals for a computational advantage over classical computation of near-term
+                (not fault tolerant) digital quantum computers. PQCs have to be "trained" &#8212
+                i.e., the expectation value function has to be maximized over the space of
+                parameters.
+                <br>
+                This paper deals with the number of samples (or "runs" of the quantum computer)
+                which are required to train the PQC, and approaches it from an information theoretic
+                viewpoint. The main take-away is a disparity in the large amount of information
+                contained in a single exact evaluation of the expectation value, vs the
+                exponentially small amount contained in the random sample obtained from a single run
+                of the quantum circuit.
+              </td>
+	    </tr>
+	  </tbody>
+
+	  <tbody class="labels">
+	    <tr>
+	      <td colspan="4">
+		<label for="input-PQC"><a href="https://arxiv.org/abs/1901.114314">arXiv:1901.11434</a>
+                  <i>Input Redundancy for Parameterized Quantum Circuits</i></label>
+		<input type="checkbox" name="input-PQC" id="input-PQC" data-toggle="toggle">
+	      </td>
+	    </tr>
+	  </tbody>
+	  <tbody class="hide" style="display: none;">
+	    <tr>
+	      <td colspan="4">
+                Dirk Oliver Theis (Ketita), Javier Gil Vidal: <a href="https://doi.org/10.3389/fphy.2020.00297">Frontiers in Physics</a>
+                <br>
+                The topic area of this paper parameterized quantum circuits (quantum neural
+                networks) which are trained to estimate a given function, specifically the type of
+                circuits proposed by Mitarai et al. (Phys. Rev. A, 2018).  The input is encoded into
+                amplitudes of states of qubits.  The no-cloning principle of quantum mechanics
+                suggests that there is an advantage in redundantly encoding the input value several
+                times. We follow this suggestion and prove lower bounds on the number of redundant
+                copies for two types of input encoding.  We draw conclusions for the architecture
+                design of QNNs.
+              </td>
+	    </tr>
+	  </tbody>
+
+	  <tbody class="labels">
+	    <tr>
+	      <td colspan="4">
+		<label for="calc-PQC"><a href="https://arxiv.org/abs/1812.06323">arXiv:1812.06323</a>
+                  <i>Calculus on parameterized quantum circuits</i></label>
+		<input type="checkbox" name="calc-PQC" id="calc-PQC" data-toggle="toggle">
+	      </td>
+	    </tr>
+	  </tbody>
+	  <tbody class="hide" style="display: none;">
+	    <tr>
+	      <td colspan="4">
+                Dirk Oliver Theis (Ketita), Javier Gil Vidal: Technical report
+                <br>
+                Mitarai, Negoro, Kitagawa, and Fujii proposed a type of parameterized quantum
+                circuits, for which they gave a way to estimate derivatives wrt the parameters using
+                only changes in the values of the parameters, not in the circuit itself, i.e., no
+                ancillas or controlled operations.  Recently, Schuld et al. have extended the
+                results, but they need to revert to ancillas and controlled operations for some
+                cases.  In this note, we extend the types of MiNKiF circuits for which derivatives
+                can be computed without ancillas or controlled operations &#8212; at the cost of a
+                larger number of evaluation points.  We also propose a "training" (i.e., optimizing
+                the parameters) which takes advantage of our approach.
+              </td>
+	    </tr>
+	  </tbody>
+
+        </table>
+
+        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+          $(document).ready(function() {
+	      $('[data-toggle="toggle"]').change(function(){
+	          $(this).parents().next('.hide').toggle();
+	      });
+          });
+        </script>
+
+    </div>
+</section>
+
+<!-- ============================================================================================================================== -->
+<!-- FOOTER -->
+<footer>
+    <a href="#header-start" class="back-to-top-button"><i class="fa fa-chevron-down rotate" aria-hidden="true"></i></a>
+    <div class="footer-copyright">
+        Ketita Labs O&Uuml;, Kompanii 8-8, 51007 Tartu, Estonia. Registration code 14429155.
+
+        <div class="font-licence">
+            <a href="https://fortawesome.github.com/Font-Awesome/">FontAwesome</a> icons licensed under <a href="https://scripts.sil.org/OFL_web"> SIL OFL</a>.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
