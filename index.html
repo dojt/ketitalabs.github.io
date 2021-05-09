@@ -135,9 +135,13 @@
         }
 
 
+        .no-column-break {
+            -webkit-column-break-inside: avoid;
+        }
+
         article {
             overflow: hidden;
-            width: 33%;
+            width: 50%;
             display: table-cell;
             padding-right: 50px;
         }
@@ -487,7 +491,7 @@
             </p>
         </div>
 
-        <div class="multicolumn">
+        <article>
           <h3 class="secondary-heading">R &#38 D Areas:</h3>
           <ul>
             <li>Near-term quantum computing</li>
@@ -495,8 +499,9 @@
             <li>Mitigation of quantum error</li>
             <li>Quantum-computational chemistry</li>
           </ul>
-          <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
+        </article>
 
+        <article>
           <h3 class="secondary-heading">Areas of Expertise:</h3>
           <ul>
             <li>Quantum computing hardware and quantum control (theory side)</li>
@@ -505,7 +510,7 @@
             <li>AI for quantum systems</li>
             <li>Quantum communication</li>
           </ul>
-        </div>
+        </article>
 
     </div>
 </section>
