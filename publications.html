@@ -493,7 +493,7 @@
 	  <tbody class="hide" style="display: none;">
 	    <tr>
 	      <td colspan="4">
-                Bahman Ghandchi &#38 Dirk Oliver Theis (Ketita): To be submitted
+                Bahman Ghandchi &#38 Dirk Oliver Theis (Ketita): Technical Report
                 <br>
                 Parameterized quantum circuits (PQC, aka, variational quantum circuits) are among
                 the proposals for a computational advantage over classical computation of near-term
@@ -560,6 +560,39 @@
                 can be computed without ancillas or controlled operations &#8212; at the cost of a
                 larger number of evaluation points.  We also propose a "training" (i.e., optimizing
                 the parameters) which takes advantage of our approach.
+              </td>
+	    </tr>
+	  </tbody>
+
+	  <tbody class="labels">
+	    <tr>
+	      <td colspan="4">
+		<label for="QRAMshit"><a href="https://arxiv.org/abs/1810.10759">arXiv:1810.10759</a>
+                  <i>Note on (active-)QRAM-style data access as a quantum circuit</i></label>
+		<input type="checkbox" name="QRAMshit" id="QRAMshit" data-toggle="toggle">
+	      </td>
+	    </tr>
+	  </tbody>
+	  <tbody class="hide" style="display: none;">
+	    <tr>
+	      <td colspan="4">
+                Tore Vincent Carstens &#38 Dirk Oliver Theis (Ketita): Technical report
+                <br>
+                We consider active (i.e., requring <i>2n</i> parallel control
+                operations) QRAM-like effect
+                <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                Σₓ |<i>x</i>⟩⟨<i>x</i>|⊗<i>Uₓ</i>
+                <br>
+                with the sum ranging over all values of <i>n</i>
+                bits, and <i>Uₓ</i> unitaries preparing results
+                depending on an additional set of (disjoint) qubits.
+                <br>
+                We observe that it can be realized, as a quantum
+                circuit of depth <i>O(n+√m)</i> (where <i>m</i> is
+                the size of the result register) plus the maximum over
+                all <i>x</i> of the circuit depths of controlled-<i>Uₓ</i>
+                operations.
               </td>
 	    </tr>
 	  </tbody>
